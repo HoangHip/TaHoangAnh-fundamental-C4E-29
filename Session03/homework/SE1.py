@@ -1,7 +1,7 @@
 list_items = ['T-shirt','Sweater']
 loop = True
 while loop:
-    x = input("Welcome to our shop, what do you want (C, R, U, D)? ")
+    x = input("Welcome to our shop, what do you want (C, R, U, D)? ".upper()) #.upper() nhập chữ thường hay hoa đều nhận
     if x == "R":
         print(*list_items, sep =", ")
     elif x == "C":
