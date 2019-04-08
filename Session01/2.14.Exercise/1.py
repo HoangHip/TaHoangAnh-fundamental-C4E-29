@@ -1,0 +1,10 @@
+x = 'All'
+y = 'work'
+z = 'and'
+c = 'no'
+v = 'play'
+b = 'makes'
+n = 'Jack'
+a = 'dull'
+m = 'boy'
+print(x, y, z, c, v, b, n, a, m)
