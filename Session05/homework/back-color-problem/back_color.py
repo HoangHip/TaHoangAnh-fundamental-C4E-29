@@ -37,12 +37,28 @@ def generate_quiz():
 
     text = choice(text_set)
     color = choice(color_set)
-    quiz_type = randint(0, 1)
-
+    quiz_type = randint(0,1)
     return text, color, quiz_type
-generate_quiz()
 def mouse_press(x, y, text, color, quiz_type):
-    x = pos
-    
-    return True
-
+    if quiz_type == 1:
+        for item in shapes:
+            if item['color'] == color:
+                rect = item['rect']
+                if x in range(rect[0], rect[0]+rect[2]):
+                    if y in range(rect[1], rect[1]+rect[3]):
+                        return True
+                    else:
+                        return False
+                else:
+                    return False
+    else:
+        for item in shapes:
+            if item['text'] == text.lower():
+                rect = item['rect']
+                if x in range(rect[0], rect[0]+rect[2]):
+                    if y in range(rect[1], rect[1]+rect[3]):
+                        return True
+                    else:
+                        return False
+                else:
+                    return False
