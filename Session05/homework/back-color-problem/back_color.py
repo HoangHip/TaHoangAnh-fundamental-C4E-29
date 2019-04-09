@@ -28,19 +28,21 @@ def get_shapes():
     return shapes
 
 
-def generate_quiz(text, color, quiz_type):
-    x = choice(shapes)
-    text = x['text']
-    color = x['color']
-    
+def generate_quiz():
+    text_set = []
+    color_set = []
+    for item in shapes:
+        text_set.append(item['text'].upper())
+        color_set.append(item['color'])
 
-    
-    
-    return [
-                'RED',
-                '#4CAF50',
-                randint(0, 1) # 0 : meaning, 1: color
-            ]
+    text = choice(text_set)
+    color = choice(color_set)
+    quiz_type = randint(0, 1)
 
+    return text, color, quiz_type
+generate_quiz()
 def mouse_press(x, y, text, color, quiz_type):
+    x = pos
+    
     return True
+
